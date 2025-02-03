@@ -1,35 +1,40 @@
-<!doctype html>
-<html lang="en"> 
- <head> 
-  <meta charset="UTF-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>Key Giriş Ekranı</title> 
-  <link rel="stylesheet" href="styles.css"> 
- </head> 
- <body> 
-  <div class="container"> 
-   <div class="login-box"> 
-    <div class="logo"> 
-     <img src="https://i.imgur.com/g51s9Oo.png" alt="Logo"> 
-    </div> 
-    <h1>CRYPTO SOFT V</h1> 
-    <p>To log in, enter the keys below</p> 
-    <form id="login-form"> 
-     <div class="input-group"> 
-      <input type="text" id="key1" placeholder="password Key " required> <span class="icon">|👤|</span> 
-     </div> 
-     <p>.</p> 
-     <div class="input-group"> 
-      <input type="password" id="key2" placeholder="login Key " <requ6ired> <span class="icon">|🔒|</span> 
-     </div> 
-     <p>.</p> 
-     <p>.</p> 
-     <p>.</p> <button type="submit" id="login-button">LOG IN</button> 
-    </form> 
-   </div> 
-   <p class="🔒🔒 SPPORT 🔒🔒"><a href="https://t.me/D_admin_D00" target="_blank">Contact Support</a></p> 
-  </div> 
-  </div> 
-  <script src="script.js"></script> 
- </body>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resmi Tam Ekran Göster</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <img id="fullscreenImage" src="error.png" alt="Tam Ekran Resim" onclick="toggleFullScreen()">
+
+    <script>
+        function toggleFullScreen() {
+            let img = document.getElementById("fullscreenImage");
+
+            if (!document.fullscreenElement) {
+                img.requestFullscreen().catch(err => {
+                    console.log(`Hata: ${err.message}`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+    </script>
+</body>
 </html>
