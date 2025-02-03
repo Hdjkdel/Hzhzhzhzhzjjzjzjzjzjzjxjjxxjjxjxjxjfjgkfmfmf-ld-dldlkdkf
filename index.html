@@ -1,40 +1,22 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resmi Tam Ekran Göster</title>
-    <style>
-        body {
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: black;
-        }
-        img {
-            max-width: 100%;
-            max-height: 100%;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
-    <img id="fullscreenImage" src="error.png" alt="Tam Ekran Resim" onclick="toggleFullScreen()">
-
-    <script>
-        function toggleFullScreen() {
-            let img = document.getElementById("fullscreenImage");
-
-            if (!document.fullscreenElement) {
-                img.requestFullscreen().catch(err => {
-                    console.log(`Hata: ${err.message}`);
-                });
-            } else {
-                document.exitFullscreen();
-            }
-        }
-    </script>
-</body>
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Login Page</title> 
+  <link rel="stylesheet" href="styles.css"> 
+ </head> 
+ <body> 
+  <div class="login-container"> 
+   <div class="login-box"> 
+    <div class="logo"> <span>|🔒|</span> 
+    </div> 
+    <h1>∆ CRYPTO SOFT V ∆</h1> 
+    <p class="subtitle">Enter your access key to continue</p> 
+    <input type="text" id="key-input" placeholder="Enter your key"> <button onclick="login()">Submit</button> 
+    <p class="hint"> Don't have access? <a href="#" onclick="buyAccess()">Buy access here</a> </p> 
+   </div> 
+  </div> 
+  <script src="script.js"></script> 
+ </body>
 </html>
